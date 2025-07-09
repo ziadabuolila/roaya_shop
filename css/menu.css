@@ -36,6 +36,7 @@ hr {
     width: 85px;
 }
 .close-btn {
+    position: revert !important;
     cursor: pointer;
     font-size: 35px;
     font-weight: bold;
