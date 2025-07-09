@@ -449,21 +449,20 @@
         .modal-overlay {
             display: none;
             position: fixed;
-            top: 60px;
+            top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1000;
+            z-index: 99999;
             justify-content: center;
             align-items: center;
         }
 
         .tabby-modal {
             background-color: white;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
-            width: 90%;
             max-width: 600px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -1987,6 +1986,18 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const closeButtons = document.querySelectorAll(".close-btn");
+            const modalOverlay = document.getElementById("modalOverlay");
+            closeButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    modalOverlay.style.display = "none";
+                });
+            });
+        });
+    </script>
+
 </body>
 
 </html>
