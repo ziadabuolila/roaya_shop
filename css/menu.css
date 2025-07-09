@@ -1,0 +1,85 @@
+hr {
+    width: 100%;
+    color: #000;
+}
+.link_in_the_menu{
+    color: #000;
+}
+.menu-toggle {
+    cursor: pointer;
+    z-index: 1001;
+    position: relative;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    z-index: 99999;
+    overflow-y: auto;
+}
+.sidebar.open {
+    right: 0;
+}
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    border-bottom: 1px solid #ddd;
+}
+.sidebar-header img {
+    width: 85px;
+}
+.close-btn {
+    cursor: pointer;
+    font-size: 35px;
+    font-weight: bold;
+}
+.company-name {
+    text-align: center;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 15px;
+    border-bottom: 1px solid #000;
+}
+.menu-title {
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.menu-title:hover {
+    background: #f9f9f9;
+}
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: #fafafa;
+    padding-right: 20px;
+}
+.submenu.open {
+    max-height: 5000px;
+}
+.submenu a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    position: relative;
+}
+.submenu a:hover {
+    background: #eee;
+}
+.arrow {
+    transition: transform 0.3s;
+}
+.rotate {
+    transform: rotate(90deg);
+}
